@@ -18,7 +18,7 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 
 const LinkItem = ({ href, path, children }) => {
   const active = path === href;
-  const inactiveColor = useColorModeValue('gray.200', 'whiteAlpha.900');
+  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900');
 
   return (
     <NextLink href={href}>
@@ -42,7 +42,52 @@ const NavBar = props => {
       zIndex={1}
       {...props}
     >
-      NavBar
+      <Container display="flex" maxW="container.md" wrap="wrap" align="center" justify="space-between" p={2}>
+        <Flex align="center" mr={5}>
+          <Heading as="h1" size="lg" letterSpacing="tighter">
+            <Logo />
+          </Heading>
+        </Flex>
+
+        <Stack
+          direction={{ base: 'column', md: 'row' }}
+          display={{ base: 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
+          alignItems="center"
+          flexGrow={1}
+          mt={{ base: 4, md: 0 }}
+        >
+          <LinkItem href="/works" path={path}>
+            Works
+          </LinkItem>
+
+          <LinkItem href="/posts" path={path}>
+            Posts
+          </LinkItem>
+        </Stack>
+
+        <Box flex={1} align="right">
+          <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+            <Menu>
+              <MenuButton as={IconButton} icon={<HamburgerIcon />} variant="outline" aria-label="Options" />
+              <MenuList>
+                <NextLink href="/" passHref>
+                  <MenuItem as={Link}>About</MenuItem>
+                </NextLink>
+                <NextLink href="/works" passHref>
+                  <MenuItem as={Link}>Works</MenuItem>
+                </NextLink>
+                <NextLink href="/posts" passHref>
+                  <MenuItem as={Link}>Posts</MenuItem>
+                </NextLink>
+                <MenuItem as={Link} href="https://flower-f.github.io">
+                  View Source
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Box>
+        </Box>
+      </Container>
     </Box>
   );
 };
