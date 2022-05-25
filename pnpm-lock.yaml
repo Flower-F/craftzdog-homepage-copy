@@ -9,6 +9,7 @@ specifiers:
   eslint-config-next: 12.1.6
   framer-motion: ^6.3.3
   next: 12.1.6
+  prettier: ^2.6.2
   react: 18.1.0
   react-dom: 18.1.0
 
@@ -25,6 +26,7 @@ dependencies:
 devDependencies:
   eslint: registry.npmmirror.com/eslint/8.16.0
   eslint-config-next: registry.npmmirror.com/eslint-config-next/12.1.6_eslint@8.16.0+next@12.1.6
+  prettier: registry.npmmirror.com/prettier/2.6.2
 
 packages:
 
@@ -3359,6 +3361,14 @@ packages:
     name: prelude-ls
     version: 1.2.1
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  registry.npmmirror.com/prettier/2.6.2:
+    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/prettier/-/prettier-2.6.2.tgz}
+    name: prettier
+    version: 2.6.2
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   registry.npmmirror.com/prop-types/15.8.1:
