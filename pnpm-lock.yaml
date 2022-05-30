@@ -13,6 +13,7 @@ specifiers:
   prettier: ^2.6.2
   react: 18.1.0
   react-dom: 18.1.0
+  three: ^0.141.0
 
 dependencies:
   '@chakra-ui/icons': registry.npmmirror.com/@chakra-ui/icons/2.0.1_react@18.1.0
@@ -24,6 +25,7 @@ dependencies:
   next: registry.npmmirror.com/next/12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   react: registry.npmmirror.com/react/18.1.0
   react-dom: registry.npmmirror.com/react-dom/18.1.0_react@18.1.0
+  three: registry.npmmirror.com/three/0.141.0
 
 devDependencies:
   eslint: registry.npmmirror.com/eslint/8.16.0
@@ -3809,6 +3811,12 @@ packages:
     name: text-table
     version: 0.2.0
     dev: true
+
+  registry.npmmirror.com/three/0.141.0:
+    resolution: {integrity: sha512-JaSDAPWuk4RTzG5BYRQm8YZbERUxTfTDVouWgHMisS2to4E5fotMS9F2zPFNOIJyEFTTQDDKPpsgZVThKU3pXA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/three/-/three-0.141.0.tgz}
+    name: three
+    version: 0.141.0
+    dev: false
 
   registry.npmmirror.com/tiny-invariant/1.2.0:
     resolution: {integrity: sha512-1Uhn/aqw5C6RI4KejVeTg6mIS7IqxnLJ8Mv2tV5rTc0qWobay7pDUz6Wi392Cnc8ak1H0F2cjoRzb2/AW4+Fvg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tiny-invariant/-/tiny-invariant-1.2.0.tgz}
