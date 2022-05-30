@@ -32,7 +32,7 @@ const components = {
 };
 
 const fonts = {
-  heading: 'M PLUS Rounded 1c, sans-serif'
+  heading: "'M PLUS Rounded 1c', sans-serif"
 };
 
 const colors = {
