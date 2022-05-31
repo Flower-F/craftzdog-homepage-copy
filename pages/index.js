@@ -1,10 +1,25 @@
 import NextLink from 'next/link';
-import { Box, Container, Heading, Image, useColorModeValue, Link, Button } from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  Heading,
+  Image,
+  useColorModeValue,
+  Link,
+  Button,
+  ListItem,
+  List,
+  SimpleGrid
+} from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Layout from '../components/layouts/article';
 import Section from '../components/section';
 import Paragraph from '../components/paragraph';
 import { BioSection, BioYear } from '../components/bio';
+import { GridItem } from '../components/grid-item';
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5';
+import thumbYouTube from '../public/images/links/youtube.png';
+import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png';
 
 const Home = () => {
   return (
@@ -83,6 +98,59 @@ const Home = () => {
           <Paragraph>
             Magic Cube, Hip Hop, Running, Computer Network, Compilation Principle, Data Structure and Algorithm
           </Paragraph>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
+            On the web
+          </Heading>
+          <List>
+            <ListItem>
+              <Link href="https://github.com/craftzdog" target="_blank">
+                <Button variant="ghost" colorScheme="teal" leftIcon={<IoLogoGithub />}>
+                  @craftzdog
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/inkdrop_app" target="_blank">
+                <Button variant="ghost" colorScheme="teal" leftIcon={<IoLogoTwitter />}>
+                  @inkdrop_app (English)
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://twitter.com/craftzdog" target="_blank">
+                <Button variant="ghost" colorScheme="teal" leftIcon={<IoLogoTwitter />}>
+                  @craftzdog (日本語)
+                </Button>
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link href="https://instagram.com/craftzdog" target="_blank">
+                <Button variant="ghost" colorScheme="teal" leftIcon={<IoLogoInstagram />}>
+                  @craftzdog
+                </Button>
+              </Link>
+            </ListItem>
+          </List>
+
+          <SimpleGrid columns={[1, 2, 2]} gap={6}>
+            <GridItem href="https://www.youtube.com/devaslife" title="Dev as Life" thumbnail={thumbYouTube}>
+              My YouTube channel (&gt;100k subs)
+            </GridItem>
+            <GridItem href="https://www.inkdrop.app/" title="Inkdrop" thumbnail={thumbInkdrop}>
+              A Markdown note-taking app
+            </GridItem>
+          </SimpleGrid>
+
+          <Box align="center" my={4}>
+            <NextLink href="/posts" passHref scroll={false}>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                Popular posts
+              </Button>
+            </NextLink>
+          </Box>
         </Section>
       </Container>
     </Layout>
